@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Book Finder AI</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h2>Book Finder AI</h2>
+        <button id="darkModeToggle" class="icon-btn">Dark</button>
+      </header>
+      
+      <section class="search-section">
+        <textarea id="searchTerms" placeholder="Enter search terms (one per line)"></textarea>
+        <div class="controls">
+          <select id="source">
+            <option value="all">All Sources</option>
+            <option value="gutenberg">Project Gutenberg</option>
+            <option value="archive">Internet Archive</option>
+            <option value="scholar">Google Scholar</option>
+          </select>
+          <button id="searchButton">Find & Download</button>
+        </div>
+        <div id="progress" class="progress"></div>
+        <div id="status" class="status"></div>
+      </section>
+      
+      <section class="results-dashboard">
+        <h3>Downloads</h3>
+        <ul id="resultsList"></ul>
+      </section>
+      
+      <section class="history">
+        <h3>History</h3>
+        <div class="history-header">
+          <input id="tagInput" placeholder="Add tag (e.g., coding)" />
+          <button id="exportHistory">Export</button>
+          <button id="importHistory">Import</button>
+        </div>
+        <ul id="historyList"></ul>
+        <div id="analytics" class="analytics"></div>
+      </section>
+      
+      <section class="settings">
+        <h3><span id="toggleSettings" class="toggle">Settings</span></h3>
+        <div id="settingsPanel" class="settings-panel hidden">
+          <label><input type="checkbox" id="saveAs" /> Prompt to save</label>
+          <label><input type="checkbox" id="notify" /> Notify on completion</label>
+          <label><input type="checkbox" id="autoRetry" /> Auto-retry</label>
+          <label><input type="checkbox" id="previewMode" /> Open in viewer</label>
+          <label><input type="checkbox" id="ocrSimulate" /> Simulate OCR (Beta)</label>
+          <label>Min Size (KB): <input type="number" id="minSize" min="0" /></label>
+          <label>Schedule (min): <input type="number" id="schedule" min="1" /></label>
+          <label>Category: <input id="categoryInput" placeholder="e.g., Books" /></label>
+          <button id="clearHistory">Clear History</button>
+        </div>
+      </section>
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>

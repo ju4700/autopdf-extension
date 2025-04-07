@@ -1,0 +1,17 @@
+{
+    "manifest_version": 3,
+    "name": "Book Finder AI",
+    "version": "5.0.0",
+    "description": "A premium Chrome extension for finding, managing, and viewing PDFs—all free and local.",
+    "permissions": ["downloads", "tabs", "scripting", "storage", "contextMenus", "notifications", "alarms"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": "icon.png"
+    },
+    "icons": {
+      "128": "icon.png"
+    }
+  }
